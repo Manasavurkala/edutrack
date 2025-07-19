@@ -1,18 +1,31 @@
-# 📘 EduTrack - Student Management System (Backend)
+# EduTrack - Student Management System
 
-## 🚀 Overview
-EduTrack is a RESTful backend system for managing students, courses, and grades. Built with **Node.js, Express.js, MySQL**, and supports secure JWT-based authentication.
+## 📌 Overview
+EduTrack is a backend system to manage students, courses, grades, and reports in a university setup. It supports role-based access for students, faculty, and admins.
 
-## 🔧 Tech Stack
+## 🧰 Tech Stack
 - Node.js + Express.js
-- MySQL (with Normalization)
-- JWT Authentication
-- Swagger / Postman for API Testing
+- MySQL (normalized schema)
+- JWT for authentication
+- Swagger for documentation
+- Postman Client for testing
 
-## 🛠️ Installation & Run
-```bash
-git clone <your-repo>
-cd EduTrack_Backend
-npm install
-cp .env.example .env
-npm run dev
+## ⚙️ How to Run
+1. Clone the repo
+2. `npm install`
+3. Add `.env` file
+4. `npm run dev`
+
+## 🔐 API Endpoints
+- POST `/api/users/register` - Register a user
+- POST `/api/users/login` - Login
+- POST `/api/courses/create` - Add a course (faculty/admin)
+...
+
+## 🗃️ Database Schema
+- `users(id, name, email, password, role, department)`
+- `courses(id, name, code, faculty_id)`
+...
+
+## 🧪 Testing
+Use Postman with JSON body and token headers.
